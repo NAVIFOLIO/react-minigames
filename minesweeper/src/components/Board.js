@@ -83,8 +83,6 @@ const Board = () => {
         for (let x = 0; x < h; ++x){
             for (let y = 0; y < w; ++y){
                 
-                // 爆弾マスの時だけ以下の処理をすれば十分
-                // 周囲に+1する
                 if (grid[x][y] === bomb){
                     for (let direction = 0; direction < 8; ++direction){
                         const nx = x + dx[direction];
@@ -108,11 +106,6 @@ const Board = () => {
 
     function dfs(Graph, seen, h, w, x, y){
         
-        // seen = Trueのマスが全て開けるべきマス
-        // BOMBの周り1マスまで開けるので、訪問したマスは必ず開け、
-        // かつ訪問したマスが0じゃなかったら周囲の探索はやめる
-        // という処理が必要
-
         seen[x][y] = true;
 
         if (Graph[x][y] !== 0){ return; }

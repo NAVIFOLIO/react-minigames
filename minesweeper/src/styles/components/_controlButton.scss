@@ -1,0 +1,24 @@
+.control-button{
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+}
+
+.control-button__button{
+    text-align: center;
+    flex-grow: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $white;
+    background-color: $orange;
+    border-bottom: 2px solid darken($orange, 15%);
+    margin-bottom: 15px;
+    transition: background-color 0.2s;
+}
+
+.control-button__button:hover{
+    background-color: lighten($orange, 15%);
+}

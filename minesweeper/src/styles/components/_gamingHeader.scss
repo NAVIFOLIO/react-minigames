@@ -1,0 +1,25 @@
+.gaming-header{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    background-color: $navyblue;
+}
+
+.gaming-header__titleh1, .gaming-header__titleh2{
+    margin-left: 8px;
+    font-weight: 700;
+    color: $thinblue;
+}
+
+.gaming-header__icon{
+    margin-left: 10px;
+    color: $lightblue;
+}
+
+.gameing-header__vertical-line{
+    margin-left: 15px;
+    color: $lightblue;
+}

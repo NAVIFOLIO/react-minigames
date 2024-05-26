@@ -1,0 +1,17 @@
+.option{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+label{
+  color: $darkbluegray;
+}
+
+input:checked + label{
+  font-weight: bold;
+  vertical-align: middle;
+}

@@ -1,0 +1,48 @@
+.cell {
+    display: flex;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: $white;
+    font-weight: 600;
+    background-color: $bluegray;
+    transition: background-color 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+.cell:not(first-child) {
+  margin-left: 5px;
+}
+
+.cell--notready{
+  opacity: 0.8;
+  cursor: none;
+}
+
+.cell--bomb{
+  background-color: $palepink;
+}
+
+.cell--safe{
+  background-color: $lightgreen; 
+}
+
+.cell--common{
+  background-color: $green;
+}
+
+.cell--big{
+  width: $big-cell;
+  height: $big-cell;
+}
+
+.cell--medium{
+  width: $medium-cell;
+  height: $medium-cell;
+}
+
+.cell--small{
+  width: $small-cell;
+  height: $small-cell;
+}

@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'build'),
         filename: 'bundle.js'
     },
     mode: 'development',
@@ -23,7 +23,7 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, 'public'),
+            directory: path.join(__dirname, 'build'),
         },
         host: '0.0.0.0',
         port: 8080

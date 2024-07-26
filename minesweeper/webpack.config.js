@@ -1,13 +1,15 @@
 const path = require('path');
 
-module.exports = {
-    entry: './src/app.js',
-    output: {
-        path: path.join(__dirname, 'build'),
-        filename: 'bundle.js'
-    },
-    mode: 'development',
-    module: {
+module.exports = (env) => {
+    console.log('env: ', env);
+
+    return {
+        entry: './src/app.js',
+        output: {
+            path: path.join(__dirname, 'build'),
+            filename: 'bundle.js'
+        },
+        module: {
         rules: [{
             loader: 'babel-loader',
             test: /\.js$/,
@@ -20,13 +22,14 @@ module.exports = {
                 'sass-loader'
             ] 
         }]
-    },
-    devServer: {
-        static: {
-            directory: path.join(__dirname, 'build'),
         },
-        host: '0.0.0.0',
-        port: 8080
-    },
-    devtool: "source-map"
+        devServer: {
+            static: {
+                directory: path.join(__dirname, 'build'),
+            },
+            host: '0.0.0.0',
+            port: 8080
+        },
+        devtool: env.production ? "source-map" : "eval-cheap-source-map"
+    };
 }
